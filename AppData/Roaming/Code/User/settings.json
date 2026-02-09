@@ -1,0 +1,45 @@
+{
+    "workbench.colorTheme": "Default Dark+",
+    "[nginx]": {
+        "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
+    },
+    "redhat.telemetry.enabled": true,
+    "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
+    "mssql.connections": [
+        {
+            "server": "(LocalDb)\\MSSQLLocalDB",
+            "database": "",
+            "authenticationType": "Integrated",
+            "profileName": "LocalDb",
+            "password": ""
+        }
+    ],
+    "[sql]": {
+        "editor.defaultFormatter": "ms-ossdata.vscode-postgresql"
+    },
+    "sqlDatabaseProjects.netCoreDowngradeDoNotShow": true,
+    "terminal.external.windowsExec": "wt",
+    "terminal.explorerKind": "external",
+    "workbench.startupEditor": "none",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "xml.server.binary.trustedHashes": [
+        "f3b415f7afb34bebe52fd6ec9d08939b528678d37b69e33a0d0ae6fc9fda4e41"
+    ],
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "remote.SSH.remotePlatform": {
+        "rpi.local": "linux"
+    },
+    "FSharp.suggestGitignore": false,
+    "editor.insertSpaces": false,
+    "database-client.autoSync": true,
+    "docker.extension.enableComposeLanguageServer": false
+}

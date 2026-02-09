@@ -1,0 +1,18 @@
+# GitHub
+Host github.com
+	HostName github.com
+	User git
+	IdentityFile ~/.ssh/id_rsa
+
+# Raspberry Pi
+Host {{ .rpi_host }}
+	HostName {{ .rpi_host }}
+	User myte
+	IdentityFile ~/.ssh/rpi_id_rsa
+{{ if .mmx_host }}
+# MMX Server
+Host {{ .mmx_host }}
+	HostName {{ .mmx_host }}
+	User root
+	IdentityFile ~/.ssh/mmx_id
+{{ end }}

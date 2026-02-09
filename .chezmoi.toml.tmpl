@@ -1,0 +1,4 @@
+[data]
+    email = {{ promptString "Git email address" | quote }}
+    rpi_host = {{ promptString "Raspberry Pi hostname (default: rpi.local)" "rpi.local" | quote }}
+    mmx_host = {{ promptString "MMX server IP (leave empty to skip)" "" | quote }}
