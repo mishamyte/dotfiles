@@ -7,6 +7,10 @@ WAU_DIR="/c/Program Files/Winget-AutoUpdate"
 SOURCE_DIR="$(chezmoi source-path)/wau"
 
 if [ -d "$WAU_DIR" ]; then
+    if [ ! -w "$WAU_DIR" ]; then
+        echo "WARNING: No write access to $WAU_DIR (run as admin to sync WAU config)"
+        exit 0
+    fi
     cp "$SOURCE_DIR/excluded_apps.txt" "$WAU_DIR/excluded_apps.txt"
     mkdir -p "$WAU_DIR/mods"
     cp "$SOURCE_DIR/mods/"*.ps1 "$WAU_DIR/mods/" 2>/dev/null
