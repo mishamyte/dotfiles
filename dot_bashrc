@@ -72,3 +72,9 @@ alias rmq='docker run --rm -it -d --name rabbitmq --hostname rabbitmq -p 15672:1
 # Winget
 alias wu='winget upgrade'
 alias wua='winget upgrade --all'
+
+# WAU Management
+alias wau-log='tail -50 "/c/Program Files/Winget-AutoUpdate/logs/updates.log"'
+alias wau-excluded='cat "/c/Program Files/Winget-AutoUpdate/excluded_apps.txt"'
+alias wau-config='reg query "HKLM\SOFTWARE\Romanitho\Winget-AutoUpdate"'
+alias wau-run='powershell.exe -Command "Start-ScheduledTask -TaskName Winget-AutoUpdate"'

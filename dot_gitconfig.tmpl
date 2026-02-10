@@ -2,5 +2,18 @@
 	name = Mykhailo Shevchuk
 	email = {{ .email }}
 [alias]
-	pullall = !git pull && git submodule update --init --remote --recursive && git submodule foreach -q --recursive 'echo Updating $name && git checkout $(git config -f $toplevel/.gitmodules submodule.$name.branch || echo master) && git -C $toplevel/$name pull && echo ---'
-	change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f"
+	lg = log --oneline --graph --decorate -20
+	st = status -sb
+	unstage = reset HEAD --
+	last = log -1 HEAD --stat
+	amend = commit --amend --no-edit
+	branches = branch -a --sort=-committerdate
+	stash-all = stash save --include-untracked
+[core]
+	autocrlf = true
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
+[pull]
+	rebase = true

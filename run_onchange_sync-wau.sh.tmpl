@@ -1,0 +1,16 @@
+#!/bin/bash
+# Sync WAU custom configuration to Program Files (requires admin)
+# hash: {{ include "wau/excluded_apps.txt" | sha256sum }}
+# hash: {{ include "wau/mods/Discord.Discord-installed.ps1" | sha256sum }}
+
+WAU_DIR="/c/Program Files/Winget-AutoUpdate"
+SOURCE_DIR="$(chezmoi source-path)/wau"
+
+if [ -d "$WAU_DIR" ]; then
+    cp "$SOURCE_DIR/excluded_apps.txt" "$WAU_DIR/excluded_apps.txt"
+    mkdir -p "$WAU_DIR/mods"
+    cp "$SOURCE_DIR/mods/"*.ps1 "$WAU_DIR/mods/" 2>/dev/null
+    echo "Synced WAU configuration"
+else
+    echo "WAU not installed, skipping"
+fi
