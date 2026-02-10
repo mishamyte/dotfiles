@@ -2,6 +2,7 @@
 .ssh/id_rsa*
 .ssh/mmx_id*
 .ssh/rpi_id_rsa*
+.ssh/beqom_id_rsa*
 .ssh/*.ppk
 .ssh/known_hosts
 

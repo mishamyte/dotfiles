@@ -29,6 +29,8 @@
             "id": "User.find"
         }
     ],
+    "firstWindowPreference": "defaultProfile",
+    "theme": "dark",
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{a6fa8c7d-cd16-4e80-8f44-f2d98a0bfb20}",
@@ -105,10 +107,11 @@
                 "backgroundImageOpacity": 0.25,
                 "closeOnExit": "always",
                 "commandline": "\"%PROGRAMFILES%\\git\\usr\\bin\\bash.exe\" -i -l",
-                "font": 
+                "font":
                 {
-                    "face": "CaskaydiaCove Nerd Font Mono"
+                    "face": "JetBrainsMono NF"
                 },
+                "useAcrylic": false,
                 "guid": "{a6fa8c7d-cd16-4e80-8f44-f2d98a0bfb20}",
                 "hidden": false,
                 "icon": "%PROGRAMFILES%\\Git\\mingw64\\share\\git\\git-for-windows.ico",
