@@ -1,7 +1,6 @@
 #!/bin/bash
 # Sync WAU custom configuration to Program Files (requires admin)
 # hash: {{ include "wau/excluded_apps.txt" | sha256sum }}
-# hash: {{ include "wau/mods/Discord.Discord-installed.ps1" | sha256sum }}
 
 WAU_DIR="/c/Program Files/Winget-AutoUpdate"
 SOURCE_DIR="$(chezmoi source-path)/wau"
